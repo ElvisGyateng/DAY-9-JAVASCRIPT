@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow API Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TaskFlow</h1>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Tasks</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="page-header">
+            <h2>Task Dashboard</h2>
+            <p>Manage your tasks from one place.</p>
+        </section>
+
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+        </section>
+
+
+        <section class="task-controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
+
+            <select id="statusFilter">
+                <option value="all">All Tasks</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+
+        </section>
+
+
+        <section class="create-task">
+
+            <h2>Create Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Enter task title"
+                    required
+                >
+
+                <button type="submit" id="submitButton">
+                    Add Task
+                </button>
+
+            </form>
+
+            <p id="formMessage"></p>
+
+        </section>
+
+
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+                <h2>Tasks</h2>
+
+                <button id="retryButton">
+                    Retry
+                </button>
+            </div>
+
+            <p id="statusMessage"></p>
+
+            <div id="tasksContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
